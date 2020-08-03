@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
 
     <application
         android:allowBackup="true"
@@ -42,6 +44,25 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
+
+
+        <service android:enabled="true" android:name=".service.LoopService">
+            <intent-filter>
+                <action android:name="org.allin.android.musicService" />
+            </intent-filter>
+        </service>
+
+
+        <receiver
+            android:name=".NetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
     </application>
+
+
+
 
 </manifest>

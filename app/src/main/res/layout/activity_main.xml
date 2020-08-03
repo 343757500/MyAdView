@@ -5,14 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#10067C"
     tools:context=".MainActivity">
 
   <LinearLayout
       android:visibility="visible"
       android:orientation="horizontal"
       android:id="@+id/lin_web"
+      android:background="#10067C"
       android:layout_width="match_parent"
       android:layout_height="match_parent"></LinearLayout>
+
+  <RelativeLayout
+      android:visibility="gone"
+      android:id="@+id/ll"
+      android:orientation="vertical"
+      android:background="#10067C"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <TextView
+     android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="~~网络不可用~~"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+
+  </RelativeLayout>
+
+
 
   <WebView
       android:visibility="gone"
